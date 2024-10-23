@@ -1,0 +1,106 @@
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4e5bf;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #efa016;
+    padding: 20px;
+    text-align: center;
+    color: rgb(8, 8, 8);
+}
+
+#main-content {
+    display: flex; /* Mengatur tampilan main-content menggunakan Flexbox */
+    padding: 20px;
+}
+
+nav {
+    background-color: #fbd480;
+    padding: 10px;
+    display: flex;
+    flex-direction: column; /* Menyusun tautan secara vertikal */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-right: 20px; /* Memberikan jarak antara nav dan section */
+}
+
+nav a {
+    text-decoration: none;
+    padding: 10px;
+    margin: 5px 0; /* Margin antar tautan */
+    background-color: #fbd480;
+    color: #0a0a0a;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #fbd480;
+    color: white;
+}
+
+section {
+    flex: 3; /* Mengatur agar section mengambil lebih banyak ruang */
+    background-color: #ffe4f2;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+aside {
+    flex: 1; /* Mengatur agar aside mengambil sedikit ruang */
+    background-color: #f9d884;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #f8a529;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li::before {
+    content: "🌸"; /* Menambahkan ikon bunga */
+    padding-right: 8px;
+}
+
+@media screen and (max-width: 768px) {
+    #main-content {
+        flex-direction: column; /* Mengubah menjadi kolom pada layar kecil */
+    }
+
+    nav {
+        margin-right: 0; /* Menghapus margin saat kolom */
+        margin-bottom: 20px; /* Memberikan margin bawah untuk nav */
+    }
+
+    section, aside {
+        width: 100%; /* Membuat section dan aside lebar penuh */
+        margin-right: 0; /* Menghapus margin saat kolom */
+    }
+}
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    object-fit: cover; 
+}
